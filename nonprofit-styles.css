@@ -1,0 +1,588 @@
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: Poppins, sans-serif;
+	margin: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/*HEADER*/
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+.logo {
+	width:150px;
+	padding-left: 260px;
+	opacity: .70;
+}
+.navbar {
+    padding-right: 260px;
+}
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #19322F;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #D58167;
+    transition: .3s;
+}
+.navbar a:hover, .navbar a.active {
+	color: #D58167;
+}
+.navbar a:hover::before {
+    width:100%;
+}
+
+/*FOOTER*/	
+footer {
+	padding: 20px 260px 20px 260px;
+	background-color: #19322F;
+	text-align: center;
+	color: white;
+	font-size: 10px;
+}
+.logofoot {
+	width: 20%;
+	opacity: .75;
+}
+footer img {
+	width: 30px;
+	margin: 15px 10px;
+}
+
+/*HOME INDEX PAGE*/
+.hero-image {
+  background-image: url("bg/homecat.png");
+  height: 670px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text {
+  position: absolute;
+  top: 125px;
+  left: 260px;
+  color: white;
+}
+h1 {
+	font-size: 75px;
+	text-shadow: 5px 5px 5px #000000;
+}
+h3{
+	font-size: 40px;
+	color: #19322F;
+	line-height: 50px;
+}
+h4{
+	font-weight: normal;
+	font-size: 20px;
+	margin-top: -25px;
+	color: #19322F;
+}
+.donatebar {
+	padding: 25px 260px 40px 260px;
+	background-color: #C9D8B1;
+}
+.donatebar h4 {
+	line-height: 15px;
+}
+#donate {
+	background-color: #D58167;
+	width: 300px;
+	height: 85px;
+	position: absolute;
+	top: 820px;
+  right: 260px;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#donate:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 23px;
+  right: -15px;
+  transition: 0.5s;
+}
+#donate:hover{
+  padding-right: 30px;
+  padding-left:10px;
+  background-color: #C06042;
+}
+
+#donate:hover:after {
+  opacity: 1;
+  right: 20px;
+}
+.meetcats {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 50px 260px 50px 260px;
+	background-color: #F8EBD9;
+}
+.cats {
+	padding-top: 20px;
+}
+.meetcats h4{
+	line-height: 15px;
+}
+#ourcats1, #ourcats2{
+	display: flex;
+	align-content: center;
+	margin: 0px -20px 0px -20px;
+}
+#ourcats1 div, #ourcats2 div {
+	padding-top: 30px;
+	margin: 20px;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .75);
+}
+#ourcats1 div h4, #ourcats2 div h4{
+		text-align: center;
+		padding-top: 50px;
+		line-height: 30px;
+		font-weight: bold;
+		opacity: .75;
+}
+
+#ourcats1 div img, #ourcats2 div img {
+	width: 225px;
+}
+
+/*ABOUT*/
+.largeabout {
+  background-image: url("bg/aboutbg.png");
+  height: 670px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.aboutdesc{
+	padding: 30px 0px 100px 0px;
+	font-size: 20px;
+	color:white;
+}
+.aboutdesc a{
+	line-height: 100px;
+	text-decoration: none;
+	color:white;
+}
+h2 {
+	font-size: 100px;
+	color: white;
+	padding-top: 150px;
+	margin: 0;
+}
+.boardmembers{
+	background-color: #C9D8B1;
+	min-height: 725px;
+	text-align: left;
+	padding: 30px 260px 30px 260px ;
+}
+#allmembers{
+	display: flex;
+	align-content: center;
+	margin: -20px -20px 0px -20px;
+}
+#allmembers div {
+	background-color: white;
+	padding-top: 30px;
+	margin: 20px;
+	width: 100%;
+	text-align: center;
+}
+#allmembers div h4{
+		text-align: center;
+		padding-top: 50px;
+		line-height: 30px;
+}
+#allmembers div img {
+	width: 225px;
+}
+#allmembers div p {
+	text-align: left;
+	line-height: 15px;
+	font-size: 12px;
+	padding: 10px 30px 25px 30px;
+}
+.achievements{
+	background-color:white;
+	min-height: 725px;
+	text-align: left;
+	padding: 30px 260px 30px 260px ;
+}
+#awards{
+	display: flex;
+	align-content: center;
+	margin: -20px -20px 0px -20px;
+}
+#awards div {
+	background-color: #F8EBD9;
+	padding-top: 30px;
+	margin: 20px;
+	width: 100%;
+	text-align: center;
+}
+#awards div h4{
+		text-align: center;
+		padding-top: 50px;
+		line-height: 30px;
+}
+#awards div img {
+	width: 225px;
+}
+#awards div p {
+	text-align: center;
+	line-height: 15px;
+	font-size: 15px;
+	padding: 10px 0px 25px 30px;
+}
+
+/*RESOURCES*/
+.largeresources {
+  background-image: url("bg/resourcesbg.png");
+  height: 670px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.resourcesdesc{
+	padding: 50px 0px 80px 0px;
+	font-size: 20px;
+}
+.largeresources h2, .largeresources div p {
+	color: #2F4643;
+}
+.wellness{
+	background-color: #F8EBD9;
+	min-height: 725px;
+	text-align: left;
+	padding: 30px 260px 30px 260px ;
+}
+.wellness img {
+	width: 400px ;
+	padding-top: 20px;
+}
+#wellnessall {
+	display: flex;
+}
+#wellnessart {
+	padding-left: 150px;
+	padding-top: 25px;
+}
+#wellnessart h4 {
+	padding-top: 25px;
+}
+
+.law{
+	background-color: white;
+	min-height: 725px;
+	text-align: left;
+	padding: 30px 260px 30px 260px ;
+}
+.law img {
+	width: 400px ;
+	padding-top: 20px;
+}
+#lawall {
+	display: flex;
+}
+#lawart {
+	padding-left: 150px;
+	padding-top: 25px;
+}
+#lawart h4 {
+	padding-top: 25px;
+}
+
+.tnr{
+	background-color: #C9D8B1;
+	min-height: 725px;
+	text-align: left;
+	padding: 30px 260px 30px 260px ;
+}
+.tnr img {
+	width: 400px ;
+	padding-top: 20px;
+}
+#tnrall {
+	display: flex;
+}
+#tnrart {
+	padding-left: 150px;
+	padding-top: 25px;
+}
+#tnrart h4 {
+	padding-top: 25px;
+}
+
+/*ADOPT*/
+.largeadopt {
+  background-image: url("bg/adoptbg.png");
+  height: 670px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.adoptdesc{
+	padding: 50px 0px 100px 0px;
+	font-size: 20px;
+	color:white;
+}
+.adoptinfo{
+	background-color: #F8EBD9;
+	min-height: 725px;
+	text-align: left;
+	padding: 30px 260px 30px 260px ;
+}
+#adopticons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#adopticons img {
+	width: 200px;
+	padding-bottom: 30px;
+}
+#adopticons img:hover {
+	transform: scale(1.1);
+	transition: transform .05s ease-in-out;
+}
+.adoptinfo li {
+	margin: 20px 0;
+}
+.availcats{
+	background-color: #C9D8B1;
+	min-height: 725px;
+	text-align: left;
+	padding: 30px 260px 30px 260px ;
+}
+#acats1, #acats2 {
+	display: flex;
+	align-content: center;
+	margin: -20px -20px 0px -20px;
+}
+#acats2 {
+ padding-top: 25px;
+}
+#acats1 div, #acats2 div {
+	background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .75) );
+	padding-top: 30px;
+	margin: 20px;
+	width: 100%;
+	text-align: center;
+}
+#acats1 div h4, #acats2  div h4{
+		text-align: center;
+		padding-top: 50px;
+		line-height: 30px;
+}
+#acats1 div img, #acats2  div img {
+	width: 225px;
+}
+#acats1 div p, #acats2  div p {
+	text-align: center;
+	line-height: 15px;
+}
+
+/*DONATE*/
+.largedonate {
+  background-image: url("bg/donatebg.png");
+  height: 670px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.donatedesc{
+	padding: 50px 0px 80px 0px;
+	font-size: 20px;
+}
+.largedonate h2, .largedonate div p, .largedonate div h4 {
+	color: #2F4643;
+	padding-left: 260px;
+	padding-right: 260px;
+}
+.largedonate div h4{
+	padding-top: 50px;
+	font-size: 30px;
+}
+.donateform {
+	background-color: #F8EBD9;
+	text-align: left;
+	padding: 40px 260px 50px 260px ;
+}
+.billinfo, .giftinfo, .payinfo, .donobutt {
+	width: 75%;
+	background-color: rgba(255, 255, 255, .5) ;
+	padding: 10px 50px;
+	margin: auto;
+}
+.donobutt {
+	padding-bottom: 50px;
+}
+.billinfo h3{
+	margin-bottom: 25px;
+}
+.billinfo form .user-details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+form .user-details .input-box{
+	margin: 10px 0 10px 0;
+	width: calc(100%/2 - 20px);
+}
+.user-details .input-box .details, .cardnum .num{
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.user-details .input-box input, .user-details .input-box select, .cardnum input{
+	height: 40px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #707070;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+.user-details .input-box select {
+	cursor: pointer;
+}
+.user-details .input-box select::-webkit-scrollbar{
+	display:none;
+}
+.radio{
+	display: none;
+}
+.monthonetime, .amount{
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+.amount{
+	padding-top: 20px;
+}
+.giftinfo label{
+	width: 50%;
+	padding: 15px;
+	background-color: white;
+	display: inline-block;
+	text-align: center;
+	font-weight: 500;
+	border: 1px solid #707070;
+	margin: 0 20px 0 20px;
+	cursor: pointer;
+}
+.radio:checked + label {
+	background-color: #D58167;
+	color: white;
+	transition: 0.5s;
+}
+.payinfo form .carddetails{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+form .carddetails .cvvexp{
+	margin: 10px 0 10px 0;
+	width: calc(100%/2 - 20px);
+}
+.carddetails .cvvexp .cvvexpnum{
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.carddetails .cvvexp input{
+	height: 40px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #707070;
+	padding-left: 15px;
+	box-sizing: border-box;
+}
+.carddetails .cvvexp .cvvselect{
+	display: inline-block;
+	width: 49%;
+}
+.carddetails .cvvexp select{
+	height: 40px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #707070;
+	padding-left: 15px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.carddetails .cvvexp select::-webkit-scrollbar{
+	display:none;
+}
+.donobutt .input-box{
+	text-align: center;
+	padding-top: 50px;
+}
+button{
+	width: 50%;
+	background-color: #D58167;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #C06042 ;
+	transition: 0.5s;
+}
+
+/*THANK YOU*/
+.hero-image2 {
+  background-image: url("bg/thankyoucat.jpg");
+  height: 670px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text2 {
+  position: absolute;
+  top: 130px;
+  left: 260px;
+  color: white;
+}
